@@ -1,0 +1,55 @@
+{
+  "name": "array2string",
+  "version": "1.0.0",
+  "description": "Array to string",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "test": "jest __test__",
+    "c": "git-cz",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koory1st/array2string.git"
+  },
+  "keywords": [
+    "array",
+    "string"
+  ],
+  "author": "koory1st",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koory1st/array2string/issues"
+  },
+  "homepage": "https://github.com/koory1st/array2string#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@types/jest": "^26.0.20",
+    "babel-jest": "^26.6.3",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "jest": "^26.6.3",
+    "standard-version": "^9.1.0",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.3"
+  },
+  "standard-version": {},
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
+  }
+}
