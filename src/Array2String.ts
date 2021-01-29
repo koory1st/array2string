@@ -5,7 +5,7 @@ import {ArgumentError} from './ErrorUtil'
  * array2string
  * @param arrayInput
  */
-export function array2string(arrayInput: Array<string | [string, boolean?]>): string | null {
+export function array2string(arrayInput: (string | string[] | [string, boolean])[]): string | null {
   if (!arrayInput || arrayInput.length === 0) {
     return null
   }
