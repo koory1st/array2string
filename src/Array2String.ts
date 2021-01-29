@@ -1,17 +1,17 @@
-import { ArgumentError } from './ErrorUtil'
+/** @format */
+
+import {ArgumentError} from './ErrorUtil'
 /**
  * array2string
  * @param arrayInput
  */
-export function array2string(
-  arrayInput: Array<string | [string, boolean?]>
-): string | null {
+export function array2string(arrayInput: Array<string | [string, boolean?]>): string | null {
   if (!arrayInput || arrayInput.length === 0) {
     return null
   }
   let rtValue = ''
 
-  for (let item of arrayInput) {
+  for (const item of arrayInput) {
     if (typeof item === 'string') {
       if (item) {
         if (rtValue) {

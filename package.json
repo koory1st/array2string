@@ -4,15 +4,22 @@
   "description": "Array to string",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "build": "rm -rf ./dist && tsc",
     "test": "jest __test__",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint src --fix --ext .ts",
     "c": "git-cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint && npm run format"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/koory1st/array2string.git"
+    "url": "https://github.com/koory1st/array2string.git"
   },
   "keywords": [
     "array",
@@ -28,10 +35,16 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@types/jest": "^26.0.20",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
     "babel-jest": "^26.6.3",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "jest": "^26.6.3",
+    "prettier": "^2.2.1",
     "standard-version": "^9.1.0",
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.3"

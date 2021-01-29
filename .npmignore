@@ -1,0 +1,9 @@
+__test__/
+.github/
+node_modules/
+src/
+.babelrc
+.gitignore
+CHANGELOG.md
+pnpm-lock.yaml
+tsconfig.json
