@@ -2,20 +2,21 @@
   "name": "array2string",
   "version": "1.0.3",
   "description": "Array to string",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/**/*"
   ],
   "scripts": {
-    "build": "rm -rf ./dist && tsc",
+    "build": "tsc",
     "test": "jest __test__",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint src --fix --ext .ts",
     "c": "git-cz",
     "release": "standard-version",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run test && npm run lint && npm run format"
+    "prepublishOnly": "npm run test && npm run lint && npm run format",
+    "clear": "rimraf node_modules"
   },
   "repository": {
     "type": "git",
