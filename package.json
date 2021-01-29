@@ -1,6 +1,6 @@
 {
   "name": "array2string",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Array to string",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
