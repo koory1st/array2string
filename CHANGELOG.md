@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/koory1st/array2string/compare/v1.1.1...v1.2.0) (2021-01-30)
+
+
+### Features
+
+* **array2stylestring:** new pattern of input ([4f7e8a9](https://github.com/koory1st/array2string/commit/4f7e8a9338a945c7ce66acacf0ed50473f47a070))
+
 ### [1.1.1](https://github.com/koory1st/array2string/compare/v1.1.0...v1.1.1) (2021-01-30)
 
 
