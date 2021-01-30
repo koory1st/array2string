@@ -3,6 +3,15 @@
 import {ArgumentError} from './ErrorUtil'
 /**
  * array2string
+ *
+ *  [] => null
+ *  ["abc"] => "abc"
+ *  ["abc","efg"] => "abc efg"
+ *  ["abc","", "efg"] => "abc efg"
+ *  ["abc", ["efg"]] => "abc efg"
+ *  ["abc", ["efg", false]] => "abc"
+ *  ["abc", ["efg", true]] => "abc efg"
+ *
  * @param arrayInput
  */
 export function array2string(arrayInput: (string | string[] | [string, boolean])[]): string | null {
