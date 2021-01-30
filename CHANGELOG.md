@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/koory1st/array2string/compare/v1.0.5...v1.1.0) (2021-01-30)
+
+
+### Features
+
+* **array2stylestring:** add ([816446b](https://github.com/koory1st/array2string/commit/816446b9691bfe91b31911004d9ea01eef4ea505))
+
 ### [1.0.5](https://github.com/koory1st/array2string/compare/v1.0.4...v1.0.5) (2021-01-29)
 
 ### [1.0.4](https://github.com/koory1st/array2string/compare/v1.0.3...v1.0.4) (2021-01-29)
