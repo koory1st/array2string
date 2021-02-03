@@ -17,7 +17,15 @@
  * @param input
  */
 export function array2StyleString(
-  input: (string | string[] | [string, number] | [string, string, boolean] | [string, number, boolean])[],
+  input: (
+    | string
+    | string[]
+    | [string, number]
+    | [string, null]
+    | [string, undefined]
+    | [string, string, boolean]
+    | [string, number, boolean]
+  )[],
 ): string | null {
   if (!input || input.length === 0) {
     return null
