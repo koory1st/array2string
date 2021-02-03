@@ -48,6 +48,20 @@ describe('Test of Array2StyleString', () => {
     ]
     expect(array2StyleString(input)).toBe('color:red;font-size:10px;')
   })
+  test('[["color", undefined],["font-size", 10]] => "font-size:10px;"', () => {
+    const input: (string | string[] | [string, number] | [string, string, boolean] | [string, number, boolean])[] = [
+      ['color', undefined],
+      ['font-size', 10],
+    ]
+    expect(array2StyleString(input)).toBe('font-size:10px;')
+  })
+  test('[["color", null],["font-size", 10]] => "font-size:10px;"', () => {
+    const input: (string | string[] | [string, number] | [string, string, boolean] | [string, number, boolean])[] = [
+      ['color', null],
+      ['font-size', 10],
+    ]
+    expect(array2StyleString(input)).toBe('font-size:10px;')
+  })
   test('[["color", ""],["font-size", 10]] => "font-size:10px;"', () => {
     const input: (string | string[] | [string, number] | [string, string, boolean] | [string, number, boolean])[] = [
       ['color', ''],
