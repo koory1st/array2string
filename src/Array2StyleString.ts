@@ -1,4 +1,5 @@
 /** @format */
+import {pxStyleList} from './Util'
 
 /**
  * array2StyleString
@@ -13,6 +14,7 @@
  * [["color", null],["font-size", 10]] => "font-size:10px;"
  * [["color", ""],["font-size", 10]] => "font-size:10px;"
  * [["font-size", 0]] => "font-size:0;"
+ * [["color", ""],["z-index", 10]] => "z-index:10;"
  *
  * @param input
  */
@@ -62,7 +64,7 @@ export function array2StyleString(
     }
 
     // [["color", "red"],["font-size", 10]]
-    if (typeof value === 'number' && value) {
+    if (typeof value === 'number' && value && pxStyleList.includes(key)) {
       value = value + 'px'
     }
     rt += key + ':' + value

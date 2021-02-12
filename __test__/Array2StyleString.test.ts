@@ -155,4 +155,19 @@ describe('Test of Array2StyleString', () => {
     )[] = [['font-size', 0]]
     expect(array2StyleString(input)).toBe('font-size:0;')
   })
+  test('[["color", ""],["z-index", 10]] => "z-index:10;"', () => {
+    const input: (
+      | string
+      | string[]
+      | [string, number]
+      | [string, null]
+      | [string, undefined]
+      | [string, string, boolean]
+      | [string, number, boolean]
+    )[] = [
+      ['color', ''],
+      ['z-index', 10],
+    ]
+    expect(array2StyleString(input)).toBe('z-index:10;')
+  })
 })
