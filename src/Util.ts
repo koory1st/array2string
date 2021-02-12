@@ -1,3 +1,3 @@
 /** @format */
 
-export const pxStyleList = ['font-size']
+export const noPxStyleList = ['z-index']

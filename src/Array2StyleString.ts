@@ -1,5 +1,5 @@
 /** @format */
-import {pxStyleList} from './Util'
+import {noPxStyleList} from './Util'
 
 /**
  * array2StyleString
@@ -27,6 +27,7 @@ export function array2StyleString(
     | [string, undefined]
     | [string, string, boolean]
     | [string, number, boolean]
+    | [string, []]
   )[],
 ): string | null {
   if (!input || input.length === 0) {
@@ -64,7 +65,7 @@ export function array2StyleString(
     }
 
     // [["color", "red"],["font-size", 10]]
-    if (typeof value === 'number' && value && pxStyleList.includes(key)) {
+    if (typeof value === 'number' && value && !noPxStyleList.includes(key)) {
       value = value + 'px'
     }
     rt += key + ':' + value
